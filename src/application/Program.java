@@ -1,6 +1,5 @@
 package application;
 
-import java.util.Iterator;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -41,7 +40,7 @@ public class Program {
 		int N = sc.nextInt();
 		for (int i = 0; i < N; i++) {
 			champion1.takeDamage(champion2);
-			champion2.takeDamage(champion2);
+			champion2.takeDamage(champion1);
 			
 			System.out.printf("\nResultado do turno: %d\n", i + 1);
 			System.out.println(champion1.status());
@@ -52,6 +51,7 @@ public class Program {
 			}
 		}
 		
+		System.out.println();
 		System.out.println("FIM DO COMBATE");		
 		sc.close();
 

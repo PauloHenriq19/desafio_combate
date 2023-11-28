@@ -44,8 +44,11 @@ public class Champion {
 			damage = 1;
 		}
 		else {
-			this.life = life - other.getAttack() + armor;
+			damage = other.getAttack() - armor;
+			//this.life = life - other.getAttack() + armor;
 		}
+		
+		life = life - damage;
 		
 	}
 	
